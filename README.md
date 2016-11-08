@@ -7,3 +7,4 @@ copynpaste.py is a simple and ugly script that was hack together quickly to take
  * Setting of 'i' attribute to the public key file
  * Adds an unsuspecting user
 
+> who doesn't like to auto pwn users who do not change their password?
